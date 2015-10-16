@@ -105,7 +105,7 @@
               //Adjust distance var to format user selection
               //times calculated in km so do nothing if km selected
               if(document.getElementById('inMi').selected) {
-                  e_miles = e_miles * 2.2; }
+                  e_miles = e_miles / 2.2; }
 
               // AJAX request
               $.getJSON($SCRIPT_ROOT + '/_calc_times',

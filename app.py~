@@ -1,6 +1,6 @@
-""" TREVOR JONES CS399se
-Recreation of the Brevet Calculator from the www.rusa.org website
-project 3 - ajax
+"""
+Very simple Flask web site, with one page
+displaying a course schedule.
 
 """
 
@@ -73,6 +73,7 @@ def calc_times():
   date = request.args.get('startDate')
   time = request.args.get('startTime')
 
+  
   #Typical if/else table reflecting the algorithm used by rusa.org
   #to calculate open/close times at controle points
   if (distance == 0):

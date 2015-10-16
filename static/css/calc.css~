@@ -6,8 +6,21 @@
  * add more specific styles. 
  */
 
+
+
 .inline
 {
 display:table-cell;
 }
 
+.open
+{
+background-color: green;
+display:table-cell;
+}
+
+.close
+{
+background-color: red;
+display:table-cell;
+}
