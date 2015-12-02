@@ -78,6 +78,10 @@ def calc_times():
   if (distance == 0):
       #for the oddity rule that the closing time is one hour if the   control point is 0km
       min = distance
+  if (distance == 0):
+      ot = str(time);
+      ct = str(time);
+      return jsonify(cresult=ct, oresult=ot)
   if (distance < 200 and distance > 0):
       min = 15;
       max = 34;
@@ -98,7 +102,7 @@ def calc_times():
   close = distance / min;
 
   #adjust date/time objects and reformat for display
-  start = arrow.get(date + ' ' + time, 'MM-DD-YYYY HH:mm')
+  start = arrow.get(date + ' ' + time, 'MM/DD/YYYY HH:mm')
   openT = start.replace(hours=+open);
   ot = (str(openT.hour) + ":" + str(openT.minute));
   closeT = start.replace(hours=+close);

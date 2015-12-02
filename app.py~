@@ -1,6 +1,6 @@
-"""
-Very simple Flask web site, with one page
-displaying a course schedule.
+""" TREVOR JONES CS399se
+Recreation of the Brevet Calculator from the www.rusa.org website
+project 3 - ajax
 
 """
 
@@ -73,12 +73,15 @@ def calc_times():
   date = request.args.get('startDate')
   time = request.args.get('startTime')
 
-  
   #Typical if/else table reflecting the algorithm used by rusa.org
   #to calculate open/close times at controle points
   if (distance == 0):
       #for the oddity rule that the closing time is one hour if the   control point is 0km
       min = distance
+  if (distance == 0):
+      ot = str(time);
+      ct = str(time);
+      return jsonify(cresult=ct, oresult=ot)
   if (distance < 200 and distance > 0):
       min = 15;
       max = 34;
@@ -99,7 +102,7 @@ def calc_times():
   close = distance / min;
 
   #adjust date/time objects and reformat for display
-  start = arrow.get(date + ' ' + time, 'MM-DD-YYYY HH:mm')
+  start = arrow.get(date + ' ' + time, 'MM/DD/YYYY HH:mm')
   openT = start.replace(hours=+open);
   ot = (str(openT.hour) + ":" + str(openT.minute));
   closeT = start.replace(hours=+close);
