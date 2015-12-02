@@ -1,6 +1,8 @@
 #### Project 3 - Ajax Brevet Control Calculator #####
 ######### TREVOR JONES CS399se #########
 
+#Note: For a good test of calculation times use 12/12/2012 12:00 200 km as calculator parameters
+
 #This project is a simple web server ajax application which calculates a series of control points from a distance bike route and reflects the opening and closing times available for each control point. The times are based on the distance between each point and an algorithm taken from the model algorithm at the www.rusa.gov site.
 
 #############################
